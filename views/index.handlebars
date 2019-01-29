@@ -1,0 +1,93 @@
+  <div class="container">
+     <div class="row">
+  <div class="col-lg-12">
+
+     <img src=".\assets\img\burgerhero.jpg"  class="img-fluid" alt="Responsive image">
+</div>
+</div>
+</div>
+<br>
+  <div class="container">
+
+
+
+    <div class="row">
+<div class="col-lg-4"></div>
+
+ <div class="col-lg-4">
+        <div class="card text-center">
+
+
+          <label for="ca">Add your favorite burger!</label>
+          <input type="text" id="ca" name="burgerName"><br>
+
+          
+          <input id="add-burger" class="btn btn-success" type="submit" value="Add Burger"><br>
+  
+      
+       
+       
+       
+       
+        </div>
+
+      </div>
+
+ </div> <!-- End of Row -->
+</div>
+<br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card text-center">
+        
+        
+<b>Burgers that are not devoured!</b><br>
+
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burgers-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
+      </div>
+
+
+      <div class="col-lg-6">
+        <div class="card text-center">
+
+          <b>Burgers that are devoured!</b><br>
+       
+<ol>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burgers-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</ol>
+
+
+          
+        </div>
+      </div>
+
+
+     
+
+    </div> <!-- end of row -->
+
+  
+
+
+
+    </div> <!-- end of container-->
