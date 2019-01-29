@@ -19,6 +19,7 @@ else{
     password: "root",
     database: "burgers_db"
 
+});
 }
 
 
